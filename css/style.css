@@ -29,34 +29,37 @@ body {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, #00000070, #00000070),
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
     url(../img/hero.jpeg);
   background-size: cover;
   background-position: center;
   position: relative;
-  /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
 }
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 3rem;
-  left: 3rem;
+  top: 4rem;
+  left: 4rem;
 }
-.logo {
+.header__logo {
   height: 3.5rem;
 }
-.text-box {
+.header__text-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.heading-primary {
+.header__heading-primary {
   color: #ffffff;
-  backface-visibility: hidden; /* To remove shakyness of an animation */
   margin-bottom: 3rem;
+  /* backface-visibility: hidden; To remove shakyness of an animation */
 }
-.heading-primary-main {
+.header__heading-primary--main {
   display: block;
   font-size: 5rem;
   font-weight: 800;
@@ -65,7 +68,7 @@ body {
   text-transform: uppercase;
   animation: moveInLeft 2s ease-in;
 }
-.heading-primary-sub {
+.header__heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -91,6 +94,9 @@ body {
     opacity: 1;
   }
 }
+
+/* Button */
+
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -110,7 +116,7 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-.btn-white {
+.btn--white {
   background-color: #ffffff;
   color: #777777;
 }
