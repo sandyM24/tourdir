@@ -1,16 +1,26 @@
 /* Basic reset using universal selector inside it we will remove default margin and padding added by browser. */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  /* By defining box-sizing to border-box padding and border are no longer the part of height and width of an element */
+  box-sizing: inherit;
 }
+
+html {
+  /* font-size: 10px; Now 1rem = 10px */
+  font-size: 62.5%; /* because default browser font = 16px and 62.5% is 10px */
+}
+
 body {
   font-family: 'Muli', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   /* line-height: 1.7 means line-height will be 1.7 times bigger than predefined line-height */
+
+  box-sizing: border-box;
+  /* By defining box-sizing to border-box padding and border are no longer the part of height and width of an element */
 }
 
 /* ------------------------------------------------------- */
@@ -28,11 +38,11 @@ body {
 }
 .logo-box {
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 3rem;
+  left: 3rem;
 }
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 .text-box {
   position: absolute;
@@ -44,29 +54,29 @@ body {
 .heading-primary {
   color: #ffffff;
   backface-visibility: hidden; /* To remove shakyness of an animation */
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 .heading-primary-main {
   display: block;
-  font-size: 50px;
+  font-size: 5rem;
   font-weight: 800;
-  letter-spacing: 28px;
-  padding-left: 28px; /* Because of letter spacing it will not exact center padding left fix it */
+  letter-spacing: 2.8rem;
+  padding-left: 2.8rem; /* Because of letter spacing it will not exact center padding left fix it */
   text-transform: uppercase;
   animation: moveInLeft 2s ease-in;
 }
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 2px;
-  padding-left: 2px;
+  letter-spacing: 0.2rem;
+  padding-left: 0.2rem;
   animation: simpleOne 2s ease-in;
 }
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translate(-100px);
+    transform: translate(-10rem);
   }
   100% {
     opacity: 1;
@@ -85,19 +95,20 @@ body {
 .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 12px 40px;
+  padding: 1.2rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
+  font-size: 1.4rem;
 }
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 /* Button active state is when it get clicked */
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn-white {
   background-color: #ffffff;
