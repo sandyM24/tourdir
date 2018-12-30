@@ -1,3 +1,17 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes simpleOne {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -14,9 +28,30 @@ body {
   line-height: 1.7;
   box-sizing: border-box; }
 
+.btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.2rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  font-size: 1.4rem; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #ffffff;
+  color: #777777; }
+
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/hero.jpeg);
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -51,38 +86,3 @@ body {
     letter-spacing: 0.2rem;
     text-indent: 0.2rem;
     animation: simpleOne 2s ease-in; }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translate(-10rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes simpleOne {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.btn:link, .btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1.2rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  font-size: 1.4rem; }
-
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: #ffffff;
-  color: #777777; }
