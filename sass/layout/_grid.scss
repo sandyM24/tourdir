@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eeeeee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -11,7 +10,6 @@
 
   // Attribute selector ^ start, $ end, * anywhere
   [class^='col-'] {
-    background-color: red;
     float: left; // b/c of float left height of row is collapsed so we have to use clearfix hack.
 
     &:not(:last-child) {

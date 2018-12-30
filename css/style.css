@@ -28,6 +28,31 @@ body {
   line-height: 1.7;
   box-sizing: border-box; }
 
+.heading-secondary {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: linear-gradient(to right, #021b79, #0575e6);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewX(10deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 10rem 0; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -51,7 +76,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eeeeee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -60,7 +84,6 @@ body {
     display: table;
     clear: both; }
   .row [class^='col-'] {
-    background-color: red;
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
