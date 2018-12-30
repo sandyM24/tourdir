@@ -1,15 +1,20 @@
+$color-dark: #000000;
+$color-light: #ffffff;
+$color-grey: #777777;
+
 /* Basic reset using universal selector inside it we will remove default margin and padding added by browser. */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   /* font-size: 10px; Now 1rem = 10px */
-  font-size: 62.5%;
-  /* because default browser font = 16px and 62.5% is 10px */ }
+  font-size: 62.5%; /* because default browser font = 16px and 62.5% is 10px */
+}
 
 body {
   font-family: 'Muli', sans-serif;
@@ -17,72 +22,85 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   /* line-height: 1.7 means line-height will be 1.7 times bigger than predefined line-height */
+
   box-sizing: border-box;
-  /* By defining box-sizing to border-box padding and border are no longer the part of height and width of an element */ }
+  /* By defining box-sizing to border-box padding and border are no longer the part of height and width of an element */
+}
 
 /* ------------------------------------------------------- */
 /* Header */
 /* ------------------------------------------------------- */
+
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero.jpeg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-dark, 0.6),
+      rgba($color-dark, 0.6)
+    ),
+    url(../img/hero.jpeg);
   background-size: cover;
   background-position: center;
-  position: relative; }
-
+  position: relative;
+}
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem; }
-
+  left: 4rem;
+}
 .header__logo {
-  height: 3.5rem; }
-
+  height: 3.5rem;
+}
 .header__text-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; }
-
+  text-align: center;
+}
 .header__heading-primary {
-  color: #ffffff;
+  color: $color-light;
   margin-bottom: 3rem;
-  /* backface-visibility: hidden; To remove shakyness of an animation */ }
-
+  /* backface-visibility: hidden; To remove shakyness of an animation */
+}
 .header__heading-primary--main {
   display: block;
   font-size: 5rem;
   font-weight: 800;
   letter-spacing: 2.8rem;
-  padding-left: 2.8rem;
-  /* Because of letter spacing it will not exact center padding left fix it */
+  padding-left: 2.8rem; /* Because of letter spacing it will not exact center padding left fix it */
   text-transform: uppercase;
-  animation: moveInLeft 2s ease-in; }
-
+  animation: moveInLeft 2s ease-in;
+}
 .header__heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
   padding-left: 0.2rem;
-  animation: simpleOne 2s ease-in; }
-
+  animation: simpleOne 2s ease-in;
+}
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translate(-10rem); }
+    transform: translate(-10rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
-
+    transform: translate(0);
+  }
+}
 @keyframes simpleOne {
   0% {
-    opacity: 0; }
+    opacity: 0;
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 /* Button */
+
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -91,17 +109,18 @@ body {
   display: inline-block;
   border-radius: 10rem;
   transition: all 0.2s;
-  font-size: 1.4rem; }
-
+  font-size: 1.4rem;
+}
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
+  box-shadow: 0 1rem 2rem rgba($color-dark, 0.2);
+}
 /* Button active state is when it get clicked */
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
+  box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.2);
+}
 .btn--white {
-  background-color: #ffffff;
-  color: #777777; }
+  background-color: $color-light;
+  color: $color-grey;
+}

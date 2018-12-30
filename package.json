@@ -1,0 +1,24 @@
+{
+  "name": "tourdir",
+  "version": "1.0.0",
+  "description": "1. Fonts used: Google Muli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandyM24/tourdir.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandyM24/tourdir/issues"
+  },
+  "homepage": "https://github.com/sandyM24/tourdir#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
